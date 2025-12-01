@@ -4,7 +4,6 @@ public class Calc {
     public static int run(String exp) {
 
         String[] bits = exp.split(" ");
-        int result = Integer.parseInt(bits[0]);
         String op;
 
         for(int i = 1; i < bits.length; i++) {
@@ -15,6 +14,7 @@ public class Calc {
             else if (op.equals("/"))
                 bits[i - 1] = String.valueOf((Integer.parseInt(bits[i - 1]) / Integer.parseInt(bits[i + 1])));
         }
+        int result = Integer.parseInt(bits[0]);
 
         for(int n = 1; n < bits.length; n+=2){
             op = bits[n];
