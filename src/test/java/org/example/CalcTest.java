@@ -20,6 +20,21 @@ public class CalcTest {
         assertThat(Calc.run("2 + 1")).isEqualTo(3);
     }
 
+    @Test
+    @DisplayName("7 - 4 = 3")
+    public void test3() {
+        assertThat(Calc.run("7 - 4")).isEqualTo(3);
+    }
 
+    @Test
+    @DisplayName("10 + 20 + 30")
+    public void test4() {
+        assertThat(Calc.run("10 + 20 + 30")).isEqualTo(60);
+    }
 
+    @Test
+    @DisplayName("10 - 20 + 30")
+    public void test5() {
+        assertThat(Calc.run("10 - 20 + 30")).isEqualTo(20);
+    }
 }
